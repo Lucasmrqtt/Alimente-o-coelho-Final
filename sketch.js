@@ -61,17 +61,17 @@ function setup() {
 
   cutButton = createImg("./images/cut_button.png")
   cutButton.size (50,50);
-  cutButton.position (340,60);
+  cutButton.position (290,60);
   cutButton.mouseClicked (drop);
 
   cutButton2 = createImg("./images/cut_button.png")
   cutButton2.size (50,50);
-  cutButton2.position (110,150);
+  cutButton2.position (60,150);
   cutButton2.mouseClicked (drop2);
 
   cutButton3 = createImg("./images/cut_button.png")
   cutButton3.size (50,50);
-  cutButton3.position (220,330);
+  cutButton3.position (180,330);
   cutButton3.mouseClicked (drop3);
 
   resetButton = createImg("./images/reset.png")
@@ -81,7 +81,7 @@ function setup() {
 
   airButton = createImg("./images/balloon.png");
   airButton.size (150,100);
-  airButton.position (20,180);
+  airButton.position (-20,180);
   airButton.mouseClicked(air);
 
   muteButton = createImg("./images/mute.png");
@@ -94,7 +94,7 @@ function setup() {
   blink.frameDelay = 15;
   sad.frameDelay = 15;
   eat.frameDelay = 15;
-  rabbit = createSprite(400,height-70);
+  rabbit = createSprite(300,height-70);
   rabbit.addAnimation("blink", blink);
   rabbit.addAnimation("sad", sad);
   rabbit.addAnimation("eat", eat);
@@ -104,9 +104,9 @@ function setup() {
   ground = Bodies.rectangle(width/2,height-5, width, 10, {isStatic: true});
   World.add(world, ground);
 
-  rope1 = new Rope(5,{x:360, y:80})
-  rope2 = new Rope(5,{x:110,y:150}) 
-  rope3 = new Rope(3,{x:240, y:350})
+  rope1 = new Rope(5,{x:310, y:80})
+  rope2 = new Rope(5,{x:60,y:150}) 
+  rope3 = new Rope(3,{x:190, y:350})
 
   fruit = Bodies.circle(300,300,15);
   Composite.add(rope1.body,fruit);
