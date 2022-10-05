@@ -47,11 +47,11 @@ function preload() {
 function setup() {
   var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
   if (isMobile) {
-    canW = displayWidth
-    canH = displayHeight
+    canW = displayWidth-50
+    canH = displayHeight-50
   } else {
-    canW = windowWidth
-    canH = windowHeight
+    canW = windowWidth-50
+    canH = windowHeight-50
   }
 
   createCanvas(canW, canH);
@@ -94,7 +94,7 @@ function setup() {
   blink.frameDelay = 15;
   sad.frameDelay = 15;
   eat.frameDelay = 15;
-  rabbit = createSprite(420,height-70);
+  rabbit = createSprite(400,height-70);
   rabbit.addAnimation("blink", blink);
   rabbit.addAnimation("sad", sad);
   rabbit.addAnimation("eat", eat);
